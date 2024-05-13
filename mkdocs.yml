@@ -33,6 +33,8 @@ plugins:
 
 nav:
   - Home: index.md
-  - Creational: creational.md
+  - Creational:
+    - Builder: creational/builder.md
+    - Factory Method: creational/factory-method.md
   - Structural: structural.md
   - Behavioral: behavioral.md
