@@ -1,0 +1,38 @@
+site_name: Design Patterns
+
+site_url: http://127.0.0.1:8000/mkdocs
+
+theme:
+  logo: https://cdn-icons-png.flaticon.com/512/2500/2500198.png
+  name: material
+  palette: 
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+plugins:
+  - offline:
+      enabled: true
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            members_order: source
+            group_by_category: true
+
+nav:
+  - Home: index.md
+  - Creational: creational.md
+  - Structural: structural.md
+  - Behavioral: behavioral.md
