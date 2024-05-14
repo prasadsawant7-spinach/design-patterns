@@ -212,9 +212,17 @@ classDiagram
     class Designer {
         build_basic_ui()
     }
+    class UI {
+        TextField
+        Checkbox
+        Button
+    }
     Button <|-- Figma
     TextField <|-- Figma
     Checkbox <|-- Figma
-    DesignTool <|-- Figma
+    DesignTool --|> Figma
     DesignTool <|-- Designer
+    Button --|> UI
+    TextField --|> UI 
+    Checkbox --|> UI
 ```
