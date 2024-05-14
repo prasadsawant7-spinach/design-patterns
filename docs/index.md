@@ -1,4 +1,4 @@
-# Top 8 Design Patterns
+# Widely Used Design Patterns
 
 <b>Creational Patterns</b>
 <ul>

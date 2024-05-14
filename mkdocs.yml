@@ -5,6 +5,9 @@ site_url: http://127.0.0.1:8000/mkdocs
 theme:
   logo: https://cdn-icons-png.flaticon.com/512/2500/2500198.png
   name: material
+  features:
+    - content.code.select
+    - content.code.copy
   palette: 
     - scheme: default
       primary: blue
@@ -31,10 +34,25 @@ plugins:
             members_order: source
             group_by_category: true
 
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
 nav:
   - Home: index.md
   - Creational:
     - Builder: creational/builder.md
     - Factory Method: creational/factory-method.md
-  - Structural: structural.md
-  - Behavioral: behavioral.md
+  - Structural:
+    - Adapter: structural/adapter.md
+    - Facade: structural/facade.md
+    - Decorator: structural/decorator.md
+  - Behavioral:
+    - Observer: behavioral/observer.md
+    - Strategy: behavioral/strategy.md
+    - State: behavioral/state.md

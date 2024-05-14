@@ -1,4 +1,5 @@
 # creational/factory.py
+
 """
 **2. Factory Method**\n
 The Factory Method Design Pattern is a creational design pattern used in software engineering to provide an interface for creating objects in a superclass, while allowing subclasses to alter the type of objects that will be created.
