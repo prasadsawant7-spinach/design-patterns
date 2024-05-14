@@ -80,3 +80,43 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+## Class Diagram
+``` mermaid
+classDiagram
+    class DesignTool {
+        createDesign()
+    }
+    class Figma {
+        createDesign()
+    }
+    class AdobeXD {
+        createDesign()
+    }
+    class Zeplin {
+        createDesign()
+    }
+    class DesignToolProvider {
+        getDesignTool()
+    }
+    class FigmaProvider {
+        getDesignTool()
+    }
+    class AdobeXDProvider {
+        getDesignTool()
+    }
+    class ZeplinProvider {
+        getDesignTool()
+    }
+    class Designer {
+        createDesign()
+    }
+    DesignTool <|-- DesignToolProvider
+    Designer --|> DesignToolProvider
+    DesignToolProvider --|> FigmaProvider
+    DesignToolProvider --|> AdobeXDProvider
+    DesignToolProvider --|> ZeplinProvider
+    DesignTool --|> Figma
+    DesignTool --|> AdobeXD
+    DesignTool --|> Zeplin
+```
